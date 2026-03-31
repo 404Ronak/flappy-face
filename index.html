@@ -344,7 +344,7 @@ function collides() {
 function jump() {
   if (state !== 'playing' || bird.dead) return;
   // comfortable jump — not too high, not too low
-  bird.vy = -(H * 0.005 + 2.0);
+  bird.vy = -H * 0.005;
   playJump();
 }
 
@@ -401,7 +401,7 @@ function loop() {
 
   if (!bird.dead) {
     // gentle gravity — easy to control
-    bird.vy += H * 0.00048;
+    bird.vy += H * 0.00032;
     bird.y  += bird.vy;
     if (collides()) {
       bird.dead = true;
