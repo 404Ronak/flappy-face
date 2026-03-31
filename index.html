@@ -399,7 +399,7 @@ function loop() {
   });
   drawGround();
   if (!bird.dead) {
-    bird.vy += H * 0.0012;
+    bird.vy += H * 0.008;
     bird.y  += bird.vy;
     if (collides()) {
       bird.dead = true;
