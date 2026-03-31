@@ -344,7 +344,7 @@ function collides() {
 function jump() {
   if (state !== 'playing' || bird.dead) return;
   // comfortable jump — not too high, not too low
-  bird.vy = -(H * 0.013 + 3.8);
+  bird.vy = -(H * 0.008 + 2.8);
   playJump();
 }
 
