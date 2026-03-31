@@ -271,7 +271,7 @@ function drawBg() { drawSky(); updateClouds(); updateBgBirds(); updateBgFaces();
 
 // ── PIPES ─────────────────────────────────────────────────────────
 function pipeW() { return Math.max(45, Math.min(80, W * 0.13)); }
-function pipeGap() { return Math.max(110, 160 - score * 1.8); }
+function pipeGap() { return Math.max(140, 190 - score * 1.4); }
 function spawnPipe() {
   const pg = pipeGap(), minT = H*0.12, maxT = H*0.6;
   pipes.push({ x: W+pipeW(), topH: minT+Math.random()*(maxT-minT), gap: pg, scored: false });
@@ -351,7 +351,7 @@ function collides() {
 // ── JUMP ──────────────────────────────────────────────────────────
 function jump() {
   if (state !== 'playing' || bird.dead) return;
-  bird.vy = -(H * 0.015 + 4.1);
+  bird.vy = -(H * 0.014 + 4.2);
   playJump();
 }
 
@@ -399,7 +399,7 @@ function loop() {
   });
   drawGround();
   if (!bird.dead) {
-    bird.vy += H * 0.0008;
+    bird.vy += H * 0.0012;
     bird.y  += bird.vy;
     if (collides()) {
       bird.dead = true;
