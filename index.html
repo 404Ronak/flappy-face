@@ -351,7 +351,7 @@ function collides() {
 // ── JUMP ──────────────────────────────────────────────────────────
 function jump() {
   if (state !== 'playing' || bird.dead) return;
-  bird.vy = -(H * 0.014 + 4.2);
+  bird.vy = -(H * 0.011 + 3.7);
   playJump();
 }
 
